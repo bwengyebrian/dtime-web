@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import NavBar from './components/common/navBar';
+import TimeComponent from './components/timeComponent';
+import TimeReact from "./components/timeReact";
+import User from "./components/user";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = ()=>{
+  return(  
+  <Fragment>
+    <NavBar/>
+    <TimeComponent/>
+    <TimeReact/>
+    <div id="content">
+      <User/>
+    <h1>Hello 4to5</h1>
     </div>
-  );
+ 
+  </Fragment>  
+
+  ) 
 }
 
 export default App;
